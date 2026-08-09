@@ -24,8 +24,6 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def get_gold_data(interval="1h", period="1mo"):
-    try:
         ticker = yf.Ticker("GC=F")
         df = ticker.history(period=period, interval=interval)
         if df.empty:
