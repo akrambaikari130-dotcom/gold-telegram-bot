@@ -105,4 +105,6 @@ def create_chart(df):
     ax1.tick_params(colors='white')
     ax1.grid(True, alpha=0.2)
     if 'RSI' in df.columns:
-        ax2.plot(df['Date
+       ax2.plot(df['Date'], df['RSI'], color='#9C27B0', linewidth=1, label='RSI') 
+    
+    
